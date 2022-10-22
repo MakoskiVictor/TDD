@@ -25,7 +25,7 @@ describe("fizzbuzz", () => {
         expect(() => fizzbuzz()).toThrow(/number/)
         //() => se hace para los throws
     })
-    it("Should throw an message if not namber is provided", ()=>{
+    it("Should throw an message if not number is provided", ()=>{
         expect(() => fizzbuzz(NaN)).toThrow(/number/)
     })
     it("should return 1 if 1 is provided", () =>{
