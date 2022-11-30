@@ -1,4 +1,4 @@
-/* 
+/*
     Escribir una funcion que al pasarle un numero:
         -Muestra "fizz" si es multiplo de 3.
         -Muestra "buzz" si es multiplo de 5.
@@ -16,20 +16,19 @@
     return number;
 } */
 
-//REFACTOR
+// REFACTOR
 
-    export const fizzbuzz = (number) => {
-        if(typeof number !== "number") throw new Error("number is requerid"); 
-        if(Number.isNaN(number)) throw new Error("number must be a number");
+export const fizzbuzz = (number) => {
+  if (typeof number !== 'number') throw new Error('number is requerid')
+  if (Number.isNaN(number)) throw new Error('number must be a number')
 
-        let multiplies = {3: "fizz", 5: "buzz"}
-        let output = "";
-        Object
-            .entries(multiplies)
-            .forEach(([multiplier, word]) => {
-                if(number % multiplier === 0) output += word
-            })
-        
-        return output === "" ? number : output;
+  const multiplies = { 3: 'fizz', 5: 'buzz' }
+  let output = ''
+  Object
+    .entries(multiplies)
+    .forEach(([multiplier, word]) => {
+      if (number % multiplier === 0) output += word
+    })
 
-    }
+  return output === '' ? number : output
+}
